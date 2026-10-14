@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lázaro Gómez Ontiveros · Portafolio profesional</title>
+<meta name="description" content="Operaciones de servicio basadas en datos: método, modelos, gobierno y casos de IA aplicada. Portafolio de Lázaro Gómez Ontiveros.">
+<meta property="og:title" content="Lázaro Gómez Ontiveros · Portafolio profesional">
+<meta property="og:description" content="Ocho piezas, un mismo método: operaciones, gobierno de servicio, datos e inteligencia artificial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1F3864; --blue:#2E74B5; --sky:#9FC3E8; --ink:#262626; --gray:#5E6A75; --line:#D8DEE5; --panel:#F4F6F8; --tint:#E9F1F9; --bg:#FFFFFF; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', 'Carlito', 'Calibri', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header.hero { background: var(--navy); color: #fff; padding: 72px 0 64px; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--sky); }
+  .hero h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.05; margin: 8px 0 20px; font-weight: 900; }
+  .hero .rule { width: 72px; height: 4px; background: var(--sky); margin-bottom: 22px; }
+  .hero .sub { font-size: clamp(18px, 2.4vw, 22px); color: var(--sky); max-width: 720px; }
+  .hero .meta { color: #C6D6E8; margin-top: 18px; font-size: 15px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; font-weight: 700; font-size: 15px; }
+  .btn.primary { background: var(--sky); color: var(--navy); }
+  .btn.ghost { border: 1.5px solid var(--sky); color: #fff; }
+  .btn:hover { text-decoration: none; opacity: .9; }
+  section { padding: 56px 0; }
+  section.alt { background: var(--panel); }
+  h2 { font-size: clamp(26px, 4vw, 34px); color: var(--navy); line-height: 1.15; margin: 6px 0 12px; }
+  .lead { font-size: 17px; max-width: 760px; }
+  .quote { border-left: 4px solid var(--blue); padding: 6px 0 6px 16px; color: var(--navy); font-style: italic; font-size: 18px; margin: 22px 0 0; max-width: 760px; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+  .stat .k { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--gray); text-transform: uppercase; }
+  .stat .v { font-size: 30px; font-weight: 900; color: var(--navy); }
+  .stat .d { font-size: 13px; color: var(--gray); line-height: 1.4; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
+  .card.new { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue) inset; }
+  .card .num { font-size: 13px; font-weight: 900; color: var(--blue); letter-spacing: 1px; }
+  .card h3 { font-size: 20px; color: var(--navy); line-height: 1.25; }
+  .card .q { color: var(--gray); font-style: italic; }
+  .card ul { padding-left: 18px; font-size: 15px; }
+  .tag { align-self: flex-start; font-size: 11px; font-weight: 700; color: var(--blue); border: 1px solid var(--blue); border-radius: 20px; padding: 1px 10px; letter-spacing: .5px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+  .tags span { font-size: 12px; background: var(--tint); color: var(--navy); border-radius: 4px; padding: 2px 8px; }
+  .feature { background: var(--navy); color: #fff; border-radius: 12px; padding: 28px; margin-top: 18px; }
+  .feature h3 { font-size: 22px; margin-bottom: 4px; }
+  .feature p.s { color: var(--sky); margin-bottom: 16px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .kpi { background: rgba(255,255,255,.06); border: 1px solid #3C5A85; border-radius: 8px; padding: 14px; }
+  .kpi .k { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky); font-weight: 700; }
+  .kpi .v { font-size: 26px; font-weight: 900; }
+  .kpi .d { font-size: 13px; color: #C6D6E8; line-height: 1.4; }
+  .stack { margin-top: 14px; font-size: 14px; color: #C6D6E8; }
+  .principles { display: grid; gap: 12px; margin-top: 24px; }
+  .pr { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
+  .pr b { color: var(--navy); font-size: 17px; }
+  .pr p { color: #4A5560; font-size: 15px; }
+  footer { background: var(--navy); color: #C6D6E8; padding: 48px 0 36px; }
+  footer h2 { color: #fff; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 28px; }
+  footer .disc { border-top: 1px solid #3C5A85; padding-top: 14px; font-size: 13px; color: #8FA8C4; }
+  @media (max-width: 760px) {
+    .stats, .kpis { grid-template-columns: repeat(2, 1fr); }
+    .grid { grid-template-columns: 1fr; }
+    header.hero { padding: 52px 0 44px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Portafolio profesional · <a href="index.html" style="color:#fff;text-decoration:underline">English</a></div>
+    <h1>Lázaro Gómez Ontiveros</h1>
+    <div class="rule"></div>
+    <p class="sub">Operaciones de servicio basadas en datos. Método, modelos, gobierno y casos de inteligencia artificial aplicada.</p>
+    <p class="meta">Chief Operations Officer · Servicios de tecnología · Operaciones multipaís en LATAM · Ciudad de México</p>
+    <div class="btns">
+      <a class="btn primary" href="LGO_Portafolio_Profesional_RevC_ES.pdf" download>Descargar portafolio (PDF)</a>
+      <a class="btn ghost" href="LGO_Portfolio_RevC_EN-ES.pdf" download>PDF bilingüe (EN/ES)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/lazarogomezontiveros" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="mailto:lazarogomez@hotmail.com">Escríbeme</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue)">Cómo leer este portafolio</div>
+    <h2>Ocho piezas, un mismo método</h2>
+    <p class="lead">Este portafolio no muestra proyectos: muestra cómo abordo un problema operativo. Cada pieza parte de una pregunta de negocio, aplica un método explícito y termina en un artefacto que alguien puede usar al día siguiente. Las piezas 7 y 8 llevan el método a dos escenarios completos de datos e IA, con plataformas, CAPEX y OPEX.</p>
+    <p class="quote">Convierto operaciones de servicio que se gestionan por percepción en operaciones que se gestionan con datos, sin aumentar la plantilla.</p>
+    <div class="stats">
+      <div class="stat"><div class="k">Experiencia</div><div class="v">20+</div><div class="d">años en operaciones y tecnología</div></div>
+      <div class="stat"><div class="k">Telecomunicaciones</div><div class="v">21</div><div class="d">años en operación de red y entrega de servicio</div></div>
+      <div class="stat"><div class="k">Alcance</div><div class="v">LATAM</div><div class="d">operación multipaís y multisitio</div></div>
+      <div class="stat"><div class="k">Formación</div><div class="v">MBA</div><div class="d">ITAM (en curso) · Ing. Electrónica IPN · Certified Chief AI Officer</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="piezas">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue)">Contenido</div>
+    <h2>Las piezas</h2>
+    <div class="grid">
+      <article class="card"><div class="num">PIEZA 01</div><h3>Dimensionamiento de cobertura con datos por hora</h3><p class="q">¿Cuánta gente necesito, en qué horario, y puedo ampliar servicio sin contratar?</p><ul><li>Ventana de servicio de 9 a 14 h con la misma plantilla</li><li>Cobertura de la demanda de 84% a 94%</li></ul><div class="tags"><span>Capacidad</span><span>Curva de demanda</span></div></article>
+      <article class="card"><div class="num">PIEZA 02</div><h3>Marco de acuerdo de nivel operativo</h3><p class="q">Si tercerizo la operación, ¿cómo conservo el control y la responsabilidad?</p><ul><li>Objetivo del proveedor más estricto que el SLA: el margen de gestión</li><li>Cinco capítulos que casi ningún acuerdo incluye</li></ul><div class="tags"><span>OLA / SLA</span><span>Tercerización</span></div></article>
+      <article class="card"><div class="num">PIEZA 03</div><h3>Cooperación entre preventa, ingeniería y operación</h3><p class="q">¿Cómo evito vender lo que la operación no puede sostener?</p><ul><li>Tres compuertas y una matriz de responsabilidad</li><li>80% de oportunidades resueltas desde catálogo</li></ul><div class="tags"><span>Gobierno</span><span>RACI</span></div></article>
+      <article class="card"><div class="num">PIEZA 04</div><h3>Tablero ejecutivo de operaciones</h3><p class="q">¿Qué debe mirar la dirección cada mes, y qué no?</p><ul><li>Siete indicadores, tres preguntas, una página</li><li>Servicio, finanzas y sostenibilidad del equipo</li></ul><div class="tags"><span>KPI</span><span>Dirección</span></div></article>
+      <article class="card"><div class="num">PIEZA 05</div><h3>De catálogo comercial a obligaciones verificables</h3><p class="q">¿Cómo se traduce un catálogo comercial en obligaciones verificables?</p><ul><li>Matriz de ejecución y responsabilidad por servicio</li><li>Entregables internos que preservan la capacidad de diseñar</li></ul><div class="tags"><span>Contratos</span><span>Entregables</span></div></article>
+      <article class="card"><div class="num">PIEZA 06</div><h3>Inteligencia comercial sobre datos operativos</h3><p class="q">¿Qué ofrecer a cada cliente sin comprometer lo que la operación no sostiene?</p><ul><li>Cliente 360 y cinco modelos: next best offer, fuga, cross-sell, lead scoring y demanda</li><li>Metas ilustrativas: +15% conversión, −20% fuga</li></ul><div class="tags"><span>ML</span><span>Cliente 360</span><span>MLOps</span></div></article>
+      <article class="card new"><span class="tag">NUEVA · DATOS E IA</span><div class="num">PIEZA 07</div><h3>Paciente 360: datos e IA en un hospital privado</h3><p class="q">¿Cómo anticipo lo que cada paciente necesita, y cuánto cuesta construirlo y operarlo?</p><ul><li>Una vista única sobre FHIR que avisa al paciente y al médico: resurtido, laboratorios, citas y cama</li><li>Seis modelos con aprobación médica en toda acción clínica</li></ul><div class="tags"><span>Salud</span><span>Azure</span><span>FHIR</span><span>IA generativa</span></div></article>
+      <article class="card new"><span class="tag">NUEVA · DATOS E IA</span><div class="num">PIEZA 08</div><h3>Operación predictiva en retail</h3><p class="q">¿Cómo veo una falla o una desviación antes de que afecte la venta, y cuánto cuesta lograrlo?</p><ul><li>AIOps sobre 3 centros de datos y 220 tiendas: de cientos de alertas a una causa raíz</li><li>Capacidad, tiendas, transportistas y demanda anticipados</li></ul><div class="tags"><span>AIOps</span><span>Observabilidad</span><span>Retail</span></div></article>
+    </div>
+
+    <div class="feature">
+      <h3>Pieza 7 · Paciente 360</h3>
+      <p class="s">Caso de negocio ilustrativo para un hospital privado de 150 camas</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k">CAPEX</div><div class="v">USD 1.32 M</div><div class="d">inversión única, 15 meses</div></div>
+        <div class="kpi"><div class="k">OPEX</div><div class="v">USD 0.63 M</div><div class="d">al año, plataformas y equipo</div></div>
+        <div class="kpi"><div class="k">Beneficio</div><div class="v">USD 1.37 M</div><div class="d">al año</div></div>
+        <div class="kpi"><div class="k">Recuperación</div><div class="v">≈ 21 meses</div><div class="d">en operación plena</div></div>
+      </div>
+      <p class="stack">Plataformas: Microsoft Fabric · Azure Health Data Services (FHIR) · EMPI · Azure Machine Learning · Azure OpenAI · Logic Apps · WhatsApp Business · Power BI · Purview</p>
+    </div>
+    <div class="feature">
+      <h3>Pieza 8 · Operación predictiva en retail</h3>
+      <p class="s">Metas ilustrativas a 18 meses para una cadena de 220 tiendas y 3 centros de datos</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k">Incidentes mayores</div><div class="v">−40%</div><div class="d">de 60 a 36 al año</div></div>
+        <div class="kpi"><div class="k">Detección</div><div class="v">&lt; 5 min</div><div class="d">antes 30 min</div></div>
+        <div class="kpi"><div class="k">Recuperación</div><div class="v">−50%</div><div class="d">de 3 a 1.5 horas</div></div>
+        <div class="kpi"><div class="k">Inversión</div><div class="v">≈ 28 meses</div><div class="d">CAPEX 1.75 M · OPEX 1.57 M/año</div></div>
+      </div>
+      <p class="stack">Plataformas: Dynatrace · ServiceNow ITOM AIOps · Cisco ThousandEyes · Confluent (Kafka) · Databricks · Ansible · Azure OpenAI · Power BI y Grafana</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue)">El método detrás de las piezas</div>
+    <h2>Cómo trabajo</h2>
+    <p class="lead">No es una metodología con nombre: es la disciplina de no opinar antes de medir.</p>
+    <div class="principles">
+      <div class="pr"><b>1 · El dato crudo antes que el reporte</b><p>La curva horaria, la distribución por prioridad y las ráfagas solo aparecen en el detalle a nivel de registro.</p></div>
+      <div class="pr"><b>2 · Declarar el supuesto frágil</b><p>Un modelo que no declara dónde puede romperse no es un modelo, es una opinión con tabla.</p></div>
+      <div class="pr"><b>3 · El artefacto tiene que poder usarse</b><p>Una plantilla, una matriz, una propuesta de turnos o un caso de negocio con CAPEX y OPEX que alguien pueda aplicar el lunes.</p></div>
+      <div class="pr"><b>4 · La adopción es parte del diseño</b><p>Si el modelo exige captura que nadie va a hacer, está mal diseñado aunque sea correcto. En IA aplica doble.</p></div>
+      <div class="pr"><b>5 · Decir lo que no funcionó</b><p>Cada pieza incluye qué haría distinto: es el apartado que demuestra criterio propio.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Conversaciones que me interesan</div>
+    <h2>Operaciones que deben sostener más con lo mismo</h2>
+    <p>Capacidad con datos reales · Gobierno de servicio y operación tercerizada · Modelos multisitio y multipaís · Programas de datos e IA con caso de negocio · AIOps y operación predictiva</p>
+    <div class="links">
+      <a class="btn primary" href="LGO_Portafolio_Profesional_RevC_ES.pdf" download>Descargar portafolio (PDF)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/lazarogomezontiveros" target="_blank" rel="noopener">linkedin.com/in/lazarogomezontiveros</a>
+      <a class="btn ghost" href="mailto:lazarogomez@hotmail.com">lazarogomez@hotmail.com</a>
+    </div>
+    <p class="disc">Todos los datos, cifras, escenarios y ejemplos de este portafolio son sintéticos y fueron construidos para ilustrar método. No contienen ni reproducen información de ningún cliente, proveedor o empleador, presente o pasado. Los precios de plataformas son de lista y referenciales.</p>
+  </div>
+</footer>
+
+</body>
+</html>

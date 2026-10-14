@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lázaro Gómez Ontiveros · Professional Portfolio</title>
+<meta name="description" content="Data-driven service operations: method, models, governance and applied AI cases. Portfolio of Lázaro Gómez Ontiveros.">
+<meta property="og:title" content="Lázaro Gómez Ontiveros · Professional Portfolio">
+<meta property="og:description" content="Eight pieces, one method: operations, service governance, data and artificial intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#1F3864; --blue:#2E74B5; --sky:#9FC3E8; --ink:#262626; --gray:#5E6A75; --line:#D8DEE5; --panel:#F4F6F8; --tint:#E9F1F9; --bg:#FFFFFF; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', 'Carlito', 'Calibri', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header.hero { background: var(--navy); color: #fff; padding: 72px 0 64px; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--sky); }
+  .hero h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.05; margin: 8px 0 20px; font-weight: 900; }
+  .hero .rule { width: 72px; height: 4px; background: var(--sky); margin-bottom: 22px; }
+  .hero .sub { font-size: clamp(18px, 2.4vw, 22px); color: var(--sky); max-width: 720px; }
+  .hero .meta { color: #C6D6E8; margin-top: 18px; font-size: 15px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; font-weight: 700; font-size: 15px; }
+  .btn.primary { background: var(--sky); color: var(--navy); }
+  .btn.ghost { border: 1.5px solid var(--sky); color: #fff; }
+  .btn:hover { text-decoration: none; opacity: .9; }
+  section { padding: 56px 0; }
+  section.alt { background: var(--panel); }
+  h2 { font-size: clamp(26px, 4vw, 34px); color: var(--navy); line-height: 1.15; margin: 6px 0 12px; }
+  .lead { font-size: 17px; max-width: 760px; }
+  .quote { border-left: 4px solid var(--blue); padding: 6px 0 6px 16px; color: var(--navy); font-style: italic; font-size: 18px; margin: 22px 0 0; max-width: 760px; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+  .stat .k { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--gray); text-transform: uppercase; }
+  .stat .v { font-size: 30px; font-weight: 900; color: var(--navy); }
+  .stat .d { font-size: 13px; color: var(--gray); line-height: 1.4; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
+  .card.new { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue) inset; }
+  .card .num { font-size: 13px; font-weight: 900; color: var(--blue); letter-spacing: 1px; }
+  .card h3 { font-size: 20px; color: var(--navy); line-height: 1.25; }
+  .card .q { color: var(--gray); font-style: italic; }
+  .card ul { padding-left: 18px; font-size: 15px; }
+  .tag { align-self: flex-start; font-size: 11px; font-weight: 700; color: var(--blue); border: 1px solid var(--blue); border-radius: 20px; padding: 1px 10px; letter-spacing: .5px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+  .tags span { font-size: 12px; background: var(--tint); color: var(--navy); border-radius: 4px; padding: 2px 8px; }
+  .feature { background: var(--navy); color: #fff; border-radius: 12px; padding: 28px; margin-top: 18px; }
+  .feature h3 { font-size: 22px; margin-bottom: 4px; }
+  .feature p.s { color: var(--sky); margin-bottom: 16px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .kpi { background: rgba(255,255,255,.06); border: 1px solid #3C5A85; border-radius: 8px; padding: 14px; }
+  .kpi .k { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky); font-weight: 700; }
+  .kpi .v { font-size: 26px; font-weight: 900; }
+  .kpi .d { font-size: 13px; color: #C6D6E8; line-height: 1.4; }
+  .stack { margin-top: 14px; font-size: 14px; color: #C6D6E8; }
+  .principles { display: grid; gap: 12px; margin-top: 24px; }
+  .pr { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
+  .pr b { color: var(--navy); font-size: 17px; }
+  .pr p { color: #4A5560; font-size: 15px; }
+  footer { background: var(--navy); color: #C6D6E8; padding: 48px 0 36px; }
+  footer h2 { color: #fff; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 28px; }
+  footer .disc { border-top: 1px solid #3C5A85; padding-top: 14px; font-size: 13px; color: #8FA8C4; }
+  @media (max-width: 760px) {
+    .stats, .kpis { grid-template-columns: repeat(2, 1fr); }
+    .grid { grid-template-columns: 1fr; }
+    header.hero { padding: 52px 0 44px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Professional portfolio · <a href="es.html" style="color:#fff;text-decoration:underline">Español</a></div>
+    <h1>Lázaro Gómez Ontiveros</h1>
+    <div class="rule"></div>
+    <p class="sub">Data-driven service operations. Method, models, governance and applied artificial intelligence cases.</p>
+    <p class="meta">Chief Operations Officer · Technology services · Multi-country operations in LATAM · Mexico City · Spanish, English and Portuguese</p>
+    <div class="btns">
+      <a class="btn primary" href="LGO_Professional_Portfolio_RevC_EN.pdf" download>Download portfolio (PDF)</a>
+      <a class="btn ghost" href="LGO_Portfolio_RevC_EN-ES.pdf" download>Bilingual PDF (EN/ES)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/lazarogomezontiveros" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="mailto:lazarogomez@hotmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue)">How to read this portfolio</div>
+    <h2>Eight pieces, one method</h2>
+    <p class="lead">This portfolio does not showcase projects: it shows how I approach an operational problem. Each piece starts from a business question, applies an explicit method and ends in an artifact someone can use the next day. Pieces 7 and 8 take the method into two complete data and AI scenarios, with platforms, CAPEX and OPEX.</p>
+    <p class="quote">I turn service operations managed by perception into operations managed by data, without adding headcount.</p>
+    <div class="stats">
+      <div class="stat"><div class="k">Experience</div><div class="v">20+</div><div class="d">years in operations and technology</div></div>
+      <div class="stat"><div class="k">Telecommunications</div><div class="v">21</div><div class="d">years in network operations and service delivery</div></div>
+      <div class="stat"><div class="k">Scope</div><div class="v">LATAM</div><div class="d">multi-country, multi-site operations</div></div>
+      <div class="stat"><div class="k">Education</div><div class="v">MBA</div><div class="d">ITAM (in progress) · B.Eng. Electronics, IPN · Certified Chief AI Officer</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="pieces">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue)">Contents</div>
+    <h2>The pieces</h2>
+    <div class="grid">
+      <article class="card"><div class="num">PIECE 01</div><h3>Coverage sizing with hourly data</h3><p class="q">How many people do I need, at what hours, and can I extend service without hiring?</p><ul><li>Service window extended from 9 to 14 hours with the same team</li><li>Demand coverage from 84% to 94%</li></ul><div class="tags"><span>Capacity</span><span>Demand curve</span></div></article>
+      <article class="card"><div class="num">PIECE 02</div><h3>Operational level agreement framework</h3><p class="q">If I outsource the operation, how do I keep control and accountability?</p><ul><li>Vendor target stricter than the SLA: the management margin</li><li>Five chapters almost no agreement includes</li></ul><div class="tags"><span>OLA / SLA</span><span>Outsourcing</span></div></article>
+      <article class="card"><div class="num">PIECE 03</div><h3>Cooperation between presales, engineering and operations</h3><p class="q">How do I avoid selling what operations cannot sustain?</p><ul><li>Three gates and a responsibility matrix</li><li>80% of opportunities solved from the catalog</li></ul><div class="tags"><span>Governance</span><span>RACI</span></div></article>
+      <article class="card"><div class="num">PIECE 04</div><h3>Executive operations dashboard</h3><p class="q">What should leadership look at every month, and what not?</p><ul><li>Seven indicators, three questions, one page</li><li>Service, finance and team sustainability</li></ul><div class="tags"><span>KPI</span><span>Leadership</span></div></article>
+      <article class="card"><div class="num">PIECE 05</div><h3>From commercial catalog to verifiable obligations</h3><p class="q">How does a commercial catalog become verifiable obligations?</p><ul><li>Execution and accountability matrix per service</li><li>Internal deliverables that preserve the ability to design</li></ul><div class="tags"><span>Contracts</span><span>Deliverables</span></div></article>
+      <article class="card"><div class="num">PIECE 06</div><h3>Commercial intelligence on operational data</h3><p class="q">What should I offer each client without committing what operations cannot sustain?</p><ul><li>Customer 360 and five models: next best offer, churn, cross-sell, lead scoring and demand</li><li>Illustrative targets: +15% conversion, −20% churn</li></ul><div class="tags"><span>ML</span><span>Customer 360</span><span>MLOps</span></div></article>
+      <article class="card new"><span class="tag">NEW · DATA AND AI</span><div class="num">PIECE 07</div><h3>Patient 360: data and AI in a private hospital</h3><p class="q">How do I anticipate what each patient needs, and what does it cost to build and run?</p><ul><li>A single FHIR-based view that alerts patient and physician: refills, lab tests, appointments and beds</li><li>Six models, with physician approval on every clinical action</li></ul><div class="tags"><span>Healthcare</span><span>Azure</span><span>FHIR</span><span>Generative AI</span></div></article>
+      <article class="card new"><span class="tag">NEW · DATA AND AI</span><div class="num">PIECE 08</div><h3>Predictive operations in retail</h3><p class="q">How do I see a failure or a deviation before it hits sales, and what does it cost?</p><ul><li>AIOps over 3 data centers and 220 stores: from hundreds of alerts to one root cause</li><li>Capacity, stores, carriers and demand anticipated</li></ul><div class="tags"><span>AIOps</span><span>Observability</span><span>Retail</span></div></article>
+    </div>
+
+    <div class="feature">
+      <h3>Piece 7 · Patient 360</h3>
+      <p class="s">Illustrative business case for a 150-bed private hospital</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k">CAPEX</div><div class="v">USD 1.32 M</div><div class="d">one-time, 15 months</div></div>
+        <div class="kpi"><div class="k">OPEX</div><div class="v">USD 0.63 M</div><div class="d">per year, platforms and team</div></div>
+        <div class="kpi"><div class="k">Benefit</div><div class="v">USD 1.37 M</div><div class="d">per year</div></div>
+        <div class="kpi"><div class="k">Payback</div><div class="v">≈ 21 months</div><div class="d">at full operation</div></div>
+      </div>
+      <p class="stack">Platforms: Microsoft Fabric · Azure Health Data Services (FHIR) · EMPI · Azure Machine Learning · Azure OpenAI · Logic Apps · WhatsApp Business · Power BI · Purview</p>
+    </div>
+    <div class="feature">
+      <h3>Piece 8 · Predictive operations in retail</h3>
+      <p class="s">Illustrative 18-month targets for a chain of 220 stores and 3 data centers</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k">Major incidents</div><div class="v">−40%</div><div class="d">from 60 to 36 per year</div></div>
+        <div class="kpi"><div class="k">Detection</div><div class="v">&lt; 5 min</div><div class="d">was 30 min</div></div>
+        <div class="kpi"><div class="k">Recovery</div><div class="v">−50%</div><div class="d">from 3 to 1.5 hours</div></div>
+        <div class="kpi"><div class="k">Payback</div><div class="v">≈ 28 months</div><div class="d">CAPEX 1.75 M · OPEX 1.57 M/yr</div></div>
+      </div>
+      <p class="stack">Platforms: Dynatrace · ServiceNow ITOM AIOps · Cisco ThousandEyes · Confluent (Kafka) · Databricks · Ansible · Azure OpenAI · Power BI and Grafana</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue)">The method behind the pieces</div>
+    <h2>How I work</h2>
+    <p class="lead">It is not a branded methodology: it is the discipline of not giving an opinion before measuring.</p>
+    <div class="principles">
+      <div class="pr"><b>1 · Raw data before the report</b><p>The hourly curve, the distribution by priority and the bursts only show up in record-level detail.</p></div>
+      <div class="pr"><b>2 · Declare the fragile assumption</b><p>A model that does not declare where it can break is not a model, it is an opinion with a table.</p></div>
+      <div class="pr"><b>3 · The artifact has to be usable</b><p>A template, a matrix, a shift proposal or a business case with CAPEX and OPEX that someone can apply on Monday.</p></div>
+      <div class="pr"><b>4 · Adoption is part of the design</b><p>If the model demands data entry nobody will do, it is badly designed even if it is correct. In AI this applies twice.</p></div>
+      <div class="pr"><b>5 · Say what did not work</b><p>Every piece includes what I would do differently: it is the section that shows independent judgment.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Conversations I am interested in</div>
+    <h2>Operations that must sustain more with the same</h2>
+    <p>Capacity with real data · Service governance and outsourced operations · Multi-site and multi-country models · Data and AI programs with a business case · AIOps and predictive operations</p>
+    <div class="links">
+      <a class="btn primary" href="LGO_Professional_Portfolio_RevC_EN.pdf" download>Download portfolio (PDF)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/lazarogomezontiveros" target="_blank" rel="noopener">linkedin.com/in/lazarogomezontiveros</a>
+      <a class="btn ghost" href="mailto:lazarogomez@hotmail.com">lazarogomez@hotmail.com</a>
+    </div>
+    <p class="disc">All data, figures, scenarios and examples in this portfolio are synthetic and were built to illustrate method. They do not contain or reproduce information from any client, vendor or employer, past or present. Platform prices are list prices and for reference only.</p>
+  </div>
+</footer>
+
+</body>
+</html>
